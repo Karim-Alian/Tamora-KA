@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Ruokarandomisaattori</title>
+</head>
+<body>
+    <button type="button" onclick="start()">Ruokarandomisaattori</button>
+    <p id="ruokaehdotus"></p>
+    <script>
+        function ehdotus(ruokaehdotusMerkkijono) {
+            let ruokaehdotusElementti = document.getElementById("ruokaehdotus")
+            ruokaehdotusElementti.innerHTML = ruokaehdotusMerkkijono
+        }
+        
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+        
+        let ruokalista = ["lasagne", "makaronilaatikko", "spagetti", "kalapuikkoja"]
+        console.log("1: " + ruokalista[0])
+        console.log("2: " + ruokalista[1])
+        console.log("3: " + ruokalista[2])
+        console.log("4: " + ruokalista[3])
+        console.log(ruokalista)
+
+        let edellinen = -1
+
+        function start() {
+            let random = getRandomInt(4)
+            while (random === edellinen) {
+                random = getRandomInt(4)
+            }
+            ehdotus(ruokalista[random])
+            edellinen = random
+        }
+    </script>
+</body>

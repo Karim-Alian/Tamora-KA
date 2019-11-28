@@ -1,0 +1,20 @@
+﻿<!DOCTYPE hmtl>
+<head>
+	<meta charset="utf-8">
+	<title>Kananmunanhakkauspeli</title>
+</head>
+<body>
+	<h1>Kananmunanhakkauspeli</h1>
+	<img src=https://i2-prod.plymouthherald.co.uk/news/uk-world-news/article2426383.ece/ALTERNATES/s615/0_egg2.jpg onclick="naps()" id="muna"></img>
+	<script>
+		let laskuri = 0;
+		let voitto = 5;
+		function naps() {
+			if(laskuri < voitto){
+				laskuri++;
+			} else {
+				document.getElementById("muna").src = "https://im.mtv.fi/image/3491442/landscape16_9/1024/576/69094b0ceaea07e97644527f810b1607/uM/kananmuna.jpg";
+			}
+		}
+	</script>
+</body>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE hmtl>
+<head>
+	<meta charset="utf-8">
+	<title>Herätyskello</title>
+</head>
+<body>
+	<h1 id="EleSec">10</h1>
+	<button onclick="reset()">Reset</button>
+	<script>
+		let sekunnit = 10;
+		function reset(){
+			sekunnit = 10
+			document.getElementById("EleSec").innerHTML = sekunnit;
+		}
+		let kello = setInterval(function(){
+			sekunnit--
+			document.getElementById("EleSec").innerHTML = sekunnit;
+			if (sekunnit < 1) {
+				//joku luja ääni käynnistymään tässä
+				clearInterval(kello);
+			}
+		}, 1000);
+		
+	</script>
+</body>
